@@ -9,8 +9,8 @@ COPY wildfly-spring-boot-sample-1.0.0.war /opt/wildfly/standalone/deployments/
 
 RUN java -version
 # Add file permisions
-RUN chmod 755 /opt/wildfly/bin/
-RUN chmod 755 /opt/wildfly/standalone/deployments/
+RUN chmod -R 755 /opt/wildfly/bin/
+RUN chmod -R 755 /opt/wildfly/standalone/deployments/
 
 # Expose the ports we're interested in
 EXPOSE 8080 9990 9090
